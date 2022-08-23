@@ -7,7 +7,7 @@ const spells = [...data.spells];
 const funFacts = [...data.funFacts];
 // variable para identificar que datos tenemos en pantalla
 let datosEnPantalla = 0;
-// variable limpiar se crea para limpiar la data cuando se cambio de seccion
+// variable limpiar se crea para limpiar la data cuando se cambia de seccion en header.
 const limpiar = `<div></div>`;
 
 const noHumanos = filtroEspecie(characters);
@@ -85,7 +85,7 @@ const renderItemFunFacts = (data) => {
 };
 
 const renderItemSpecies = (data) => {
-  let id = data.id - 1;
+
   let nombre = data.name;
   let especies = data.species;
   let ojos = data.eye_color;
@@ -137,7 +137,6 @@ function indice() {
   let select = document.querySelector(".seleccionOrden");
   select.addEventListener("change", (event) => {
     let resultado = event.target.value;
-    console.log(resultado);
     let renderData = [];
 
     switch (datosEnPantalla) {
